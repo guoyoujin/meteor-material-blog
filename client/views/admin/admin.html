@@ -9,16 +9,16 @@
           <table class="striped">
             <thead>
               <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Date</th>
-                <th style="width: 40%;">Preview</th>
+                <th>标题</th>
+                <th>作者</th>
+                <th>日期</th>
+                <th style="width: 40%;">详细内容</th>
               </tr>
             </thead>
             <tbody>
               {{#each posts}}
                 <tr>
-                  <td>{{ title }}<br /><a href="/admin/edit/{{slug}}">Edit</a> <a href="/posts/{{slug}}">View</a> <a href="#" data="{{_id}}" class="red-text" id="delete">Delete</a></td>
+                  <td>{{ title }}<br /><a href="/admin/edit/{{slug}}">编辑</a> <a href="/posts/{{slug}}">查看</a> <a href="#" data="{{_id}}" class="red-text" id="delete">删除</a></td>
                   <td>{{ authorName }}</td>
                   <td>{{ formatDate publishedOn }}</td>
                   <td>{{{ summary }}}</td>
