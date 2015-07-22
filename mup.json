@@ -35,7 +35,7 @@
   // Configure environment
   "env": {
     "PORT": 8123,
-    "ROOT_URL": "http://gyj.itrydo.com"
+    "ROOT_URL": "http://yj.itrydo.com"
   },
 
   // Meteor Up checks if the app comes online just after the deployment
