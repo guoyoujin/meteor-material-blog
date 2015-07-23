@@ -1,37 +1,32 @@
 <template name="users">
-  {{> admin_navbar}}
-  <div class="row">
-    {{> admin_menu}}
-    <div class="col s10">
-      <div class="container admin">
-        <div class="card-panel">
-          <h5 class="red-text text-darken-2">{{ error }}</h5>
-          <table>
-            <thead>
-              <tr>
-                <th>姓名</th>
-                <th>邮箱</th>
-                <th>权限</th>
-                <th>操作</th>
-              </tr>
-            </thead>
-            <tbody>
-              {{#each allUsers}}
-              <tr>
-                <td>{{ profile.name }}</td>
-                <td>
-                  {{#each emails}}
-                    {{ address }}
-                  {{/each}}
-                </td>
-                <td>{{ roles }}</td>
-                <td><a href="#" data="{{_id}}" class="red-text" id="delete">删除</a></td>
-              </tr>
+  {{> navbar}}  
+  <div class="container">
+    <div class="card-panel">
+      <h5 class="red-text text-darken-2">{{ error }}</h5>
+      <table class = "striped hoverable">
+        <thead>
+          <tr>
+            <th>姓名</th>
+            <th>邮箱</th>
+            <th>权限</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each allUsers}}
+          <tr>
+            <td>{{ profile.name }}</td>
+            <td>
+              {{#each emails}}
+              {{ address }}
               {{/each}}
-            </tbody>
-          </table>
-        </div>
-      </div>
+            </td>
+            <td>{{ roles }}</td>
+            <td><a href="#" data="{{_id}}" class="red-text" id="delete">删除</a></td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
     </div>
   </div>
 </template>
