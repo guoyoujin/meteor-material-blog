@@ -2,36 +2,35 @@
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper blue darken-2">
-        <ul  class="side-nav blue darken-2" id="mobile-demo">
-            <li><a href="/">首页</a></li>
-            <li><a href="/about">关于</a></li>
-            <li><a href="/contact">联系我</a></li>
-            <li>
-              {{#if is_login}}
-              <a  class=' dropdown-button' data-beloworigin="true" href='#' data-activates='dropdown1'>
-                  欢迎您, {{currentUser.profile.name}}
-                  <ul id='dropdown1' class='dropdown-content'>
-                    <li class="divider"></li>
-                    <li><a href="/admin">博客列表</a></li>
-                    <li class="divider"></li>
-                    <li><a href="/admin/new-post">添加博客</a></li>
-                    <li class="divider"></li>
-                    <li><a href="/admin/add-new-user">添加用户</a></li>
-                    <li class="divider"></li>
-                    <li><a href="/admin/users">用户列表</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#" id="logout">退出</a></li>
-                  </ul>
-              </a>
-             {{else}}
-             <a  class=' dropdown-button' data-beloworigin="true" href='/admin' data-activates='dropdown1'>
-                  您好，请先登陆
-             </a>
-             {{/if}}
-            </li>
-          </ul>
+        <ul  class="side-nav blue darken-2 left" id="mobile-demo">
+          <li><a href="/">首页</a></li>
+          <li><a href="/about">关于</a></li>
+          <li><a href="/contact">联系我</a></li>
+          <li>
+            {{#if is_login}}
+            <a  class=' dropdown-button' data-beloworigin="true" href='#' data-activates='dropdown1'>
+                欢迎您, {{currentUser.profile.name}}
+                <ul id='dropdown1' class='dropdown-content'>
+                  <li class="divider"></li>
+                  <li><a href="/admin">博客列表</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/admin/new-post">添加博客</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/admin/add-new-user">添加用户</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/admin/users">用户列表</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" id="logout">退出</a></li>
+                </ul>
+            </a>
+           {{else}}
+           <a  class=' dropdown-button' data-beloworigin="true" href='/admin' data-activates='dropdown1'>
+                您好，请先登陆
+           </a>
+           {{/if}}
+          </li>
+        </ul>
         <div class="container">
-        
           <a href="/" class="brand-logo" style="position:relative;float:left;font-size:18px;" >天青色等烟雨</a>
           <form>
               <div class="input-field left">
