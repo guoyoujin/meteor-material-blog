@@ -3,6 +3,13 @@ Template.navbar.events({
     event.preventDefault();
     Meteor.logout();
     Router.go('/');
+  },
+  "search form": function(event) {
+    var search_value = Session.get('addHabitMainView.search_value');
+    if (search_value){
+      return Habits.find({name: {$regex: search_value, $options:'i'}});
+    }
+    return null;
   }
 });
 Template.navbar.helpers({
@@ -27,7 +34,7 @@ Template.navbar.onRendered(function(){
   });
   $(".button-collapse").sideNav({
       menuWidth: 200, // Default is 240
-      edge: 'left', // Choose the horizontal origin
+      edge: 'right', // Choose the horizontal origin
       closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
     }
   );

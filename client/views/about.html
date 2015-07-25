@@ -1,10 +1,35 @@
 <template name="about">
   {{> navbar}}
-  <div class="container">
-    <div class="card-panel">
-      <h4 class="blue-text text-darken-2">关于</h4>
-      <p>This is the about page. Enter you information here.</p>
+      <div class="nav-wrapper blue darken-2" style="position:relative;float:left;">
+      	<a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
+      	<i class="mdi-navigation-menu"></i>
+      	</a>
+      </div>
+
+      <ul id="nav-mobile " class="side-nav fixed nav-wrapper blue darken-2" style="position:relative;float:left;">
+        <li class="bold">
+        	<a href="about.html" class="waves-effect waves-teal">Profile</a>
+        </li>
+        <li class="bold">
+        	<a href="getting-started.html" class="waves-effect waves-teal">
+        		Experience
+        	</a>
+    	</li>
+        <li class="bold">
+        	<a href="http://materializecss.com/mobile.html" class="waves-effect waves-teal">Projects</a>
+        </li>
+        <li class="bold">
+        	<a href="showcase.html" class="waves-effect waves-teal">Skills
+       	</a>
+       </li>
+        <li class="bold">
+        	<a href="http://materializecss.com/mobile.html" class="waves-effect waves-teal">Education</a>
+        </li>
+      </ul>
+    <div class="">
+	    <div class="card-panel">
+	      <h4 class="blue-text text-darken-2">关于</h4>
+	      <p>This is the about page. Enter you information here.</p>
+	    </div>
     </div>
-  </div>
-  {{> footer}}
 </template>
