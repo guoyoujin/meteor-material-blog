@@ -7,5 +7,5 @@
 meteor-platform
 iron:router
 reactive-var
-materialize:materialize
 accounts-password
+materialize:materialize
