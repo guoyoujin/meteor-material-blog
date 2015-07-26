@@ -16,10 +16,13 @@ Template.post_new.events({
   },
   "submit form": function(event) {
     event.preventDefault();
+    console.log("点击天哦了表单");
+    console.log(Session.get("editor-html"));
+
     var post = {
       title: $('input[name=title').val().trim(),
       slug: $('input[name=slug').val().trim(),
-      body: $('textarea[name=body').val().replace(/\n/g, '<br />')
+      body: Session.get("editor-html")
     }
     Meteor.call('newPost', post, function(error) {
       if (error) {
