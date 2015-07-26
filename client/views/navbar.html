@@ -1,8 +1,15 @@
 <template name="navbar">
   <div class="navbar-fixed">
     <nav>
-      <div class="nav-wrapper blue darken-2">
-        <ul  class="side-nav blue darken-2 left" id="mobile-demo">
+      <div class="nav-wrapper teal accent-5">
+        <form>
+              <div class="input-field left">
+                <input id="search" type="search" required>
+                <label for="search"><i class="mdi-action-search"></i></label>
+                <i class="mdi-navigation-close"></i>
+              </div>
+          </form>
+        <ul  class="side-nav teal accent-5 left" id="mobile-demo">
           <li><a href="/">首页</a></li>
           <li><a href="/about">关于</a></li>
           <li><a href="/contact">联系我</a></li>
@@ -24,22 +31,12 @@
                 </ul>
             </a>
            {{else}}
-           <a  class=' dropdown-button' data-beloworigin="true" href='/admin' data-activates='dropdown1'>
-                您好，请先登陆
-           </a>
+           <a  class=' dropdown-button' data-beloworigin="true" href='/admin' data-activates='dropdown1'>您好，请先登陆</a>
            {{/if}}
           </li>
         </ul>
-        <div class="container">
-          <a href="/" class="brand-logo" style="position:relative;float:left;font-size:18px;" >天青色等烟雨</a>
-          <form>
-              <div class="input-field left">
-                <input id="search" type="search" required>
-                <label for="search"><i class="mdi-action-search"></i></label>
-                <i class="mdi-navigation-close"></i>
-              </div>
-          </form>
-          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <div >
+          <a href="/" class="brand-logo"  style="font-size:18px;">天青色等烟雨</a>
           <ul id="nav-wrapper" class="right hide-on-med-and-down ">
             <li><a href="/">首页</a></li>
             <li><a href="/about">关于</a></li>
@@ -68,7 +65,7 @@
              {{/if}}
             </li>
           </ul>
-          
+          <a href="#" data-activates="mobile-demo" class="button-collapse" style="position:relative;float:right;"><i class="mdi-navigation-menu"></i></a>
         </div>
       </div>
     </nav>
