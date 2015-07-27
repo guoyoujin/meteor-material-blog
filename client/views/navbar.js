@@ -5,11 +5,8 @@ Template.navbar.events({
     Router.go('/');
   },
   "search form": function(event) {
-    var search_value = Session.get('addHabitMainView.search_value');
-    if (search_value){
-      return Habits.find({name: {$regex: search_value, $options:'i'}});
-    }
-    return null;
+    var search = $('input[name=search').val().trim();
+    Session.set('search_post',search);
   }
 });
 Template.navbar.helpers({

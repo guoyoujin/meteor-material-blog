@@ -15,7 +15,6 @@ Template.contact.helpers({
 Template.contact.events({
 	'submit form': function (event, template) {
 		event.preventDefault();
-		
 		var spammer = $('input[name=blank').val();
 		if ( spammer ) {
 			template.emailError.set('Go away spammer.');
@@ -30,7 +29,7 @@ Template.contact.events({
 		var subject = $('input[name=subject').val();
 		
 		var from = $('input[name=email').val();
-		var to = 'tonyarash@gmail.com';
+		var to = 'guoyoujin123@gmail.com';
 		
 		var message = $('textarea[name=comments').val();
 		
