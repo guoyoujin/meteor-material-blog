@@ -18,6 +18,7 @@
           <li>
             {{#if is_login}}
             <a  class=' dropdown-button' data-beloworigin="true" href='#' data-activates='dropdown1'>
+            <i class="mdi-navigation-arrow-drop-down right"></i>
               欢迎您, {{currentUser.profile.name}}
               <ul id='dropdown1' class='dropdown-content'>
                 <li class="divider"></li>
@@ -33,7 +34,8 @@
                 </ul>
             </a>
            {{else}}
-           <a  class=' dropdown-button' data-beloworigin="true" href='/admin' data-activates='dropdown1'>您好，请先登陆</a>
+           <a  class=' dropdown-button' data-beloworigin="true" href='/admin' data-activates='dropdown1'>
+           <i class="mdi-navigation-arrow-drop-down right"></i>您好，请先登陆</a>
            {{/if}}
           </li>
         </ul>
@@ -48,6 +50,7 @@
             <li>
               {{#if is_login}}
               <a  class=' dropdown-button' data-beloworigin="true" href='#' data-activates='dropdown1' style="text-align: right">
+              <i class="mdi-navigation-arrow-drop-down right"></i>
                   欢迎您, {{currentUser.profile.name}}
                   <ul id='dropdown1' class='dropdown-content'>
                     <li class="divider"></li>
