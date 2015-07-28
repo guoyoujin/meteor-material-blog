@@ -9,15 +9,15 @@
               <th>标题</th>
               <th>作者</th>
               <th>日期</th>
-              <th style="width: 40%;">详细内容</th>
+              <th>详细内容</th>
             </tr>
           </thead>
           <tbody>
             {{#each posts}}
             <tr>
               <td>{{ title }}<br /><a href="/admin/edit/{{slug}}">编辑</a> <a href="/posts/{{slug}}">查看</a> <a href="#" data="{{_id}}" class="red-text" id="delete">删除</a></td>
-              <td>{{ authorName }}</td>
-              <td>{{ formatDate publishedOn }}</td>
+              <td><div>{{ authorName }}</div></td>
+              <td><div>{{ formatDate publishedOn }}</div></td>
               <td>{{{ summary }}}</td>
             </tr>
             {{/each}}
