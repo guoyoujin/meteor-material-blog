@@ -13,7 +13,10 @@ img.responsive-img {
   text-decoration:none;
 }
 */
-
+.navbar{
+	font-size: 16px;
+	height: 61px;
+}
 .container {
 	margin-top: 70px;
 	width: 75%;
