@@ -21,7 +21,7 @@ Template.comments.events({
     var comment = $('textarea[name=comment').val();
     var comment = comment.replace(/\n/g, '<br />');
     var authorName = $('input[name=name').val();
-    Comments.insert({postId: postId, authorName: authorName, comment: comment});
+    Comments.insert({postId: postId, authorName: authorName, comment: comment, created_at: new Date(), updated_at: new Date(), publishedOn: new Date().getTime()});
     document.getElementById("comment").reset();
   }
 });

@@ -2,10 +2,10 @@
   <form id="comment">
     <h4 class="teal-text">评论</h4>
     <div class="input-field">
-      <input type="text" name="name" placeholder="Name" required>
+      <input type="text" name="name" placeholder="名字" required>
     </div>
     <div class="input-field">
-      <textarea name="comment" class="materialize-textarea" placeholder="Comments" requireds></textarea>
+      <textarea name="comment" class="materialize-textarea" placeholder="评论" requireds></textarea>
     </div>
     <input type="hidden" name="blank" class="mui-form-control">
     <button type="submit" class="btn btn-primary">确定
@@ -14,8 +14,8 @@
   </form>
   <ul class="collection">
     {{#each comments}}
-    <li class="collection-item">{{{comment}}}
-      <div class="secondary-content">by {{authorName}}</div>
+    <li class="collection-item">{{authorName}}
+      <div class="secondary-content">{{{comment}}}<span style="margin-left:40px">{{formatDate publishedOn }}</span></div>
     </li>
     {{/each}}
   </ul>

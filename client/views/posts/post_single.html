@@ -9,7 +9,7 @@
         <li><h5 class="teal-text text-darken-2"><strong>最后一次更新:</strong> {{formatDate publishedOn }}</h5>
         </li>
       </ul> 
-      <p>{{{ body }}}</p>
+      <p style="font-size:18px">{{{ body }}}</p>
       {{#if currentUser}}
       {{#if isPostAuthor authorId}}
       <a href="/admin/edit/{{_id}}" class="btn btn-primary">编辑</a>
