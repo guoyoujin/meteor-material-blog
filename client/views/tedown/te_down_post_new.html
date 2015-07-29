@@ -1,6 +1,6 @@
 <template name="te_down_post_new">
   {{> navbar}}  
-  <div class="container">
+  <!-- <div class="container">
     <div class="card-panel">
       <h5 class="teal-text text-darken-2">新建blog</h5>
       <form name="new-post" id="new-post">
@@ -27,6 +27,11 @@
         </button>
       </form>
       <h5 class="red-text text-darken-2">{{ error }}</h5>
+    </div>
+  </div> -->
+   <div class="container">
+     <div class="grid grid-module">
+        {{> quickForm collection="Posts" id="postInsertForm" template="telescope" type="method" meteormethod="postInsert" template="bootstrap3-horizontal"}}
     </div>
   </div>
 <!-- <div>
