@@ -3248,7 +3248,7 @@ a.object-list-item:last-of-type:hover {
   width: 50%;
   padding: 15px;
   position: absolute;
-  bottom: 40px;
+  bottom: 46px;
   top: 61px;
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.05) 0 1px 5px;
@@ -3270,7 +3270,7 @@ a.object-list-item:last-of-type:hover {
     width: 100%;
     border: none;
     z-index: 100;
-    min-height: 380px;
+    min-height: 250px;
   }
   /* line 87, ../scss/layouts/_editor.scss */
   .editor .entry-markdown .markdown, .editor .entry-markdown .entry-preview-content,

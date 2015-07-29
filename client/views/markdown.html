@@ -7,18 +7,19 @@
           <section class="entry-container">
             <header>
                 <section class="box entry-title">
-                  <input id="post-title" class="" placeholder="title" tabindex="1" type="text" name="title" required style="width:40%">
-                  <input id="post-title" class="" placeholder="slug" tabindex="1" type="text" name="slug" required style="width:40%;position:absolute;right:0;">
+                  <input id="post-title" class="" placeholder="标题" tabindex="1" type="text" name="title" required style="width:50%;height:100%">
+                  <input id="post-title" class="" placeholder="标题" tabindex="1" type="text" name="slug" required style="width:50%;position:absolute;right:0;height:100%">
                 </section>
             </header>
             {{> GhostEditor}}
+            <div style="position:absolute;bottom:0px;width:100%;margin-left: auto;margin-right: auto;">
+        <button class="btn btn-primary" type="button" name="submit-post" style="margin-left:auto;margin-right:auto;width:100%">确定
+        </button>
+      </div>
           </section>
         </main>
       </div>
-      <div style="position:absolute;bottom:0px;width:100%">
-        <button class="btn btn-primary" type="button" name="submit-post" style="margin-left:15px;margin-right:15px;width:100%">确定
-        </button>
-      </div>
+      
   </form>
   <h5 class="red-text text-darken-2">{{ error }}</h5>
 </div>

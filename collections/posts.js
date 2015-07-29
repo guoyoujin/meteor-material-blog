@@ -180,30 +180,30 @@ Meteor.methods({
       votes: 0
     });
     var postId = Posts.insert(post);
-        // return {
-        //     _id: postId
-        // };
-        Router.go('/admin');
-      },
-      postEdit: function (modifier, postId) {
-        check(Meteor.userId(), String);
-        check(modifier.$set, {
-          title: String,
-          body: String,
-          slug: String
-        });
-        var errors = validatePost(modifier.$set);
-        if (errors.title || errors.body)
-          throw new Meteor.Error('invalid-post', "你必须为你的帖子填写标题和 内容");
-        modifier.$set.updated_at = new Date();
-        Posts.update(postId, modifier);
-        return Posts.findOne(postId);
-      },
-      postDelete: function (postId) {
-        check(Meteor.userId(), String);
-        Comments.remove({postId:postId});
-        Upvoters.remove({postId:postId});
-        Posts.remove(postId);
-        return {success:true}
-      }
+    Router.go('/admin');
+    return {
+      _id: postId
+    };
+  },
+  postEdit: function (modifier, postId) {
+    check(Meteor.userId(), String);
+    check(modifier.$set, {
+      title: String,
+      body: String,
+      slug: String
     });
+    var errors = validatePost(modifier.$set);
+    if (errors.title || errors.body)
+      throw new Meteor.Error('invalid-post', "你必须为你的帖子填写标题和 内容");
+    modifier.$set.updated_at = new Date();
+    Posts.update(postId, modifier);
+    return Posts.findOne(postId);
+  },
+  postDelete: function (postId) {
+    check(Meteor.userId(), String);
+    Comments.remove({postId:postId});
+    Upvoters.remove({postId:postId});
+    Posts.remove(postId);
+    return {success:true}
+  }
+});
