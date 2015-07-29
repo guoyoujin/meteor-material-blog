@@ -1,11 +1,14 @@
 <template name="post_single">
   {{> navbar}}
   
-  <div class="container">
+  <div class="Containers">
     <div class="card-panel">
       <h2 class="teal-text text-darken-2">{{ title }}</h2>
-      <h5 class="teal-text text-darken-2">作者: {{ authorName }}</h5>
-      <h5 class="teal-text text-darken-2">{{formatDate publishedOn }}</h5> 
+      <ul class="breadcrumb" style="margin-bottom: 5px;">
+        <li><h5 class="teal-text text-darken-2"><strong>作者:</strong> {{ authorName }}</h5></li>
+        <li><h5 class="teal-text text-darken-2"><strong>最后一次更新:</strong> {{formatDate publishedOn }}</h5>
+        </li>
+      </ul> 
       <p>{{{ body }}}</p>
       {{#if currentUser}}
         {{#if isPostAuthor authorId}}

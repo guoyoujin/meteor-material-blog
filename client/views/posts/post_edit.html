@@ -1,10 +1,13 @@
 <template name="post_edit">
   {{> navbar}}  
-  <div class="container">
+  <div class="Containers">
     <div class="card-panel">
       <h2 class="teal-text text-darken-2">{{title}}</h2>
-      <h6><strong>作者:</strong> {{ authorName }}</h6>
-      <h6><strong>最后一次更新:</strong> {{formatDate publishedOn }}</h6>
+      <ul class="breadcrumb" style="margin-bottom: 5px;">
+        <li><h5 class="teal-text text-darken-2"><strong>作者:</strong> {{ authorName }}</h5></li>
+        <li><h5 class="teal-text text-darken-2"><strong>最后一次更新:</strong> {{formatDate publishedOn }}</h5>
+        </li>
+      </ul>
       <form name="new-post" id=new-post>
         <div class="row">
           <div class="col s5">

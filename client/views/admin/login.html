@@ -1,21 +1,21 @@
 <template name="login">
   {{> navbar}}
   
-  <div class="container">
+  <div class="Containers">
     <div class="card-panel">
       <h2 class="teal-text text-darken-2">登陆</h2>
       <div class="row">
         <form class="col s12" id="login-form">
           <div class="row">
-            <div class="input-field col s12">
-              <input id="email" name="email" type="email" class="validate" required>
-              <label for="email">邮箱</label>
+            <div class="input-field col s12" style="margin-top:50px">
+              <input id="email" name="email" type="email" style="font-size:18px" class="validate" required>
+              <label for="email" style="font-size:16px">邮箱</label>
             </div>
           </div>
           <div class="row">
-            <div class="input-field col s12">
-              <input id="password" name="password" type="password" class="validate" required>
-              <label for="password">密码</label>
+            <div class="input-field col s12" style="margin-top:50px">
+              <input id="password"  name="password" type="password" class="validate" required>
+              <label for="password"  style="font-size:16px">密码</label>
             </div>
           </div>
           <button id="login" class="btn btn-primary" type="submit" name="submit-post">登录

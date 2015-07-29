@@ -34,7 +34,8 @@ The admin can view, edit, and delete all posts.
 **Author:**
 
 All users with *roles: 'author'* can create new posts and edit *their own* posts. Authors cannot create new users.
-
+##部署测试
+meteor deploy youjinblog.meteor.com
 ## WIP
 
 1. Comment system (done but needs login requirement)

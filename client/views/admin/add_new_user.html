@@ -2,46 +2,46 @@
   <!--   {{> admin_navbar}}-->
   {{> navbar}}
   
-  <div class="container">
+  <div class="Containers">
     <div class="card-panel">
       <h2 class="teal-text text-darken-2">新建用户</h2>
       <div class="row">
         <form class="col s12" id="new-user-form">
           <div class="row">
-            <div class="input-field col s6">
-              <input id="first_name" name="first-name" type="text" class="validate">
-              <label for="first_name">姓</label>
+            <div class="input-field col s6" style="margin-top:40px">
+              <input id="first_name" name="first-name" type="text" class="validate" style="font-size:18px">
+              <label for="first_name" style="font-size:16px">姓</label>
             </div>
-            <div class="input-field col s6">
-              <input id="last_name" name="last-name" type="text" class="validate">
-              <label for="last_name">名</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="input-field col s6">
-              <input id="username" name="username" type="text" class="validate" required>
-              <label for="username">用户名</label>
+            <div class="input-field col s6" style="margin-top:40px">
+              <input id="last_name" name="last-name" type="text" class="validate" style="font-size:18px">
+              <label for="last_name" style="font-size:16px">名</label>
             </div>
           </div>
           <div class="row">
-            <div class="input-field col s6">
-              <input id="email" name="email" type="email" class="validate" required>
-              <label for="email">邮箱</label>
+            <div class="input-field col s6" style="margin-top:40px">
+              <input id="username" style="font-size:18px" name="username" type="text" class="validate" required>
+              <label for="username" style="font-size:16px">用户名</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6" style="margin-top:40px">
+              <input id="email" style="font-size:18px" name="email" type="email" class="validate" required>
+              <label for="email" style="font-size:16px">邮箱</label>
             </div>
             
             
-            <div class="input-field col s6">
-              <input id="password" name="password" type="password" class="validate" required>
-              <label for="password">密码</label>
+            <div class="input-field col s6" style="margin-top:40px">
+              <input id="password" style="font-size:18px" name="password" type="password" class="validate" required>
+              <label for="password" style="font-size:16px">密码</label>
             </div>
           </div>
           <p>
             <input name="role" type="radio" id="author" value="author" checked />
-            <label for="author">普通用户</label>
+            <label for="author" style="font-size:16px">普通用户</label>
           </p>
           <p>
             <input name="role" type="radio" id="admin" value="admin"/>
-            <label for="admin">管理员</label>
+            <label for="admin" style="font-size:16px">管理员</label>
           </p>
           <button id="register" class="btn btn-primary" type="submit">确定
             <i class="mdi-content-send right"></i>
