@@ -2,11 +2,11 @@
   <div class="container">
     {{#each posts}}
       <div class="card-panel ">
-        <a href="posts/{{slug}}"><h5 class="teal-text text-darken-2">{{ title }}</h5></a>
-        <p> {{{summary}}}... <a href="posts/{{slug}}" class="teal-text text-darken-2">详细</a></p>
+        <a href="posts/{{_id}}" id="a_coustom"><h2 class="teal-text text-darken-2">{{ title }}</h2></a>
+        <p> {{{summary}}}... <a href="posts/{{_id}}" class="teal-text text-darken-2">详细</a></p>
         <div class="row">
-	      <div class="col s4"><h6 class="teal-text text-darken-2" >{{formatDate publishedOn }}</h6></div>
-	      <div class="col s4"><h6 class="teal-text text-darken-2" >作者:{{ authorName }}</h6></div>
+	      <div class="col s4"><h5 class="teal-text text-darken-2" >{{formatDate publishedOn }}</h5></div>
+	      <div class="col s4"><h5 class="teal-text text-darken-2" >作者:{{ authorName }}</h5></div>
 	    </div>
       </div>
     {{/each}}

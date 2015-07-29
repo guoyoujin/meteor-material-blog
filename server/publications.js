@@ -2,15 +2,15 @@ Meteor.publish('all-posts', function() {
   return Posts.find();
 });
 
-Meteor.publish('post', function(slug) {
-  return Posts.find({ slug: slug });
+Meteor.publish('post', function(_id) {
+  return Posts.find({ _id: _id });
 });
 
-Meteor.publish('post-edit', function(slug) {
+Meteor.publish('post-edit', function(_id) {
   var user = Meteor.users.findOne(this.userId);
-  var post = Posts.findOne({ slug: slug });
+  var post = Posts.findOne({ _id: _id });
   if ( this.userId === post.authorId || user.roles === 'admin' ) {
-    return Posts.find({ slug: slug });
+    return Posts.find({ _id: _id });
   } else {
     return [];
   } 

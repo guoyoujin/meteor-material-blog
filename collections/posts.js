@@ -51,6 +51,27 @@ postSchemaObject = {
             omit: true
         }
     },
+    authorName: {
+        type: String,
+        optional: true,
+        autoform: {
+            omit: true
+        }
+    },
+    authorId: {
+        type: String,
+        optional: true,
+        autoform: {
+            omit: true
+        }
+    },
+    publishedOn: {
+        type: Number,
+        optional: true,
+        autoform: {
+            omit: true
+        }
+    },
     userId: {
         type: String, // XXX
         optional: true,
@@ -127,55 +148,53 @@ validatePost = function (post) {
 
 Meteor.methods({
     postInsert: function(postAttributes) {
+        console.log("插入数据库");
         check(Meteor.userId(), String);
         check(postAttributes, {
             title: String,
-            body: String
+            body: String,
+            slug: String
         });
-
         var errors = validatePost(postAttributes);
         if (errors.title || errors.body)
             throw new Meteor.Error('invalid-post', "你必须为你的帖子填写标题和 内容");
-
         var user = Meteor.user();
         var post = _.extend(postAttributes, {
             userId: user._id,
             author: user.username,
             created_at: new Date(),
             updated_at: new Date(),
+            publishedOn: new Date().getTime(),
+            authorName: user.profile.name,
+            authorId: user._id,
             commentsCount: 0,
             votes: 0
         });
-
         var postId = Posts.insert(post);
-        return {
-            _id: postId
-        };
+        // return {
+        //     _id: postId
+        // };
+        Router.go('/admin');
     },
     postEdit: function (modifier, postId) {
         check(Meteor.userId(), String);
         check(modifier.$set, {
             title: String,
-            body: String
+            body: String,
+            slug: String
         });
-
         var errors = validatePost(modifier.$set);
         if (errors.title || errors.body)
             throw new Meteor.Error('invalid-post', "你必须为你的帖子填写标题和 内容");
-
         modifier.$set.updated_at = new Date();
-
         Posts.update(postId, modifier);
-
         return Posts.findOne(postId);
     },
     postDelete: function (postId) {
         check(Meteor.userId(), String);
-
         Comments.remove({postId:postId});
         Upvoters.remove({postId:postId});
         Posts.remove(postId);
-
         return {success:true}
     }
 });

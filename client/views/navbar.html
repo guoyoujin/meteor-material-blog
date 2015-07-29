@@ -27,17 +27,17 @@
             <li class="">
               {{#if is_login}}
               <a href='/admin' data-target="#" class="dropdown-toggle btn-primary" data-toggle="dropdown" style="color:white">欢迎您, {{currentUser.profile.name}}<b class="caret"></b></a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu" style="background:#009688;">
                   <li class="divider"></li>
-                  <li><a href="/admin" id="a_coustom" style="color:#009688;">博客列表</a></li>
+                  <li><a href="/admin" id="a_coustom" style="color:white;" class="btn-primary">博客列表</a></li>
                   <li class="divider"></li>
-                  <li><a href="/admin/new-post" id="a_coustom" style="color:#009688;">添加博客</a></li>
+                  <li><a href="/admin/new-post" id="a_coustom" style="color:white;" class="btn-primary">添加博客</a></li>
                   <li class="divider"></li>
-                  <li><a href="/admin/add-new-user" id="a_coustom" style="color:#009688;">添加用户</a></li>
+                  <li><a href="/admin/add-new-user" id="a_coustom" style="color:white;" class="btn-primary">添加用户</a></li>
                   <li class="divider"></li>
-                  <li><a href="/admin/users" id="a_coustom" style="color:#009688;">用户列表</a></li>
+                  <li><a href="/admin/users" id="a_coustom" style="color:white;" class="btn-primary">用户列表</a></li>
                   <li class="divider"></li>
-                  <li><a href="#" id="logout" style="color:#009688;">退出</a></li>
+                  <li><a href="#" id="logout" style="color:white;" class="btn-primary">退出</a></li>
               </ul>
             {{else}}
               <a href='/admin' data-target="#" class="btn-primary" style="color:white">
