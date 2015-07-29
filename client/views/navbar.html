@@ -1,36 +1,36 @@
 <template name="navbar">
-<div class="navbar navbar-default navbar-fixed-top sample shadow-z-2" >
+  <div class="navbar navbar-default navbar-fixed-top sample shadow-z-2" >
     <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/" style="color:white">天青色等烟雨</a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/" style="color:white">天青色等烟雨</a>
     </div>
     <div class="navbar-collapse collapse navbar-responsive-collapse" >
-        <ul class="nav navbar-nav" style="background:#009688;">
-          <li><a href="/" id="a_coustom" class="btn-primary" style="color:white">首页</a></li>
-          <li class="divider"></li>
-          <li><a href="/admin/te_down_post_new" id="a_coustom" class="btn-primary" style="color:white">添加博客</a></li>
-          <li class="divider"></li>
-          <li><a href="/contact" id="a_coustom" class="btn-primary" style="color:white">联系我</a></li>
-          <li class="divider"></li>
-          <li><a href="/markdown" id="a_coustom" class="btn-primary" style="color:white">markDown</a></li>
-          <li class="divider"></li>
-          <li><a href="/about" id="a_coustom" class="btn-primary" style="color:white">关于我</a></li>
-        </ul>
-        <form class="navbar-form navbar-left" style="background:#009688;">
-            <input type="text" class="form-control col-lg-8" placeholder="Search" style="background:#009688;">
-        </form>
+      <ul class="nav navbar-nav" style="background:#009688;">
+        <li><a href="/" id="a_coustom" class="btn-primary" style="color:white">首页</a></li>
+        <li class="divider"></li>
+        <li><a href="/admin/te_down_post_new" id="a_coustom" class="btn-primary" style="color:white">添加博客</a></li>
+        <li class="divider"></li>
+        <li><a href="/contact" id="a_coustom" class="btn-primary" style="color:white">联系我</a></li>
+        <li class="divider"></li>
+        <li><a href="/markdown" id="a_coustom" class="btn-primary" style="color:white">markDown</a></li>
+        <li class="divider"></li>
+        <li><a href="/about" id="a_coustom" class="btn-primary" style="color:white">关于我</a></li>
+      </ul>
+      <form class="navbar-form navbar-left" style="background:#009688;">
+        <input type="text" class="form-control col-lg-8" placeholder="Search" style="background:#009688;">
+      </form>
       <ul class="nav navbar-nav navbar-right" style="background:#009688;">
-            <li class="">
-              {{#if is_login}}
-              <a href='/admin' data-target="#" class="dropdown-toggle btn-primary" data-toggle="dropdown" style="color:white;text-align:left">欢迎您, {{currentUser.profile.name}}<b class="caret"></b></a>
-              <ul class="dropdown-menu" style="background:#009688;">
-                  <li class="divider"></li>
-                  <li><a href="/admin" id="a_coustom" style="color:white;" class="btn-primary;height:100%;">博客列表</a></li>
-                  <li class="divider"></li>
+        <li class="">
+          {{#if is_login}}
+          <a href='/admin' data-target="#" class="dropdown-toggle btn-primary" data-toggle="dropdown" style="color:white;text-align:left">欢迎您, {{currentUser.profile.name}}<b class="caret"></b></a>
+          <ul class="dropdown-menu" style="background:#009688;">
+            <li class="divider"></li>
+            <li><a href="/admin" id="a_coustom" style="color:white;" class="btn-primary;height:100%;">博客列表</a></li>
+            <li class="divider"></li>
                   <!-- <li><a href="/admin/new-post" id="a_coustom" style="color:white;" class="btn-primary">添加博客</a></li>
                   <li class="divider"></li> -->
                   <li><a href="/admin/add-new-user" id="a_coustom" style="color:white;" class="btn-primary;height:100%;">添加用户</a></li>
@@ -38,16 +38,16 @@
                   <li><a href="/admin/users" id="a_coustom" style="color:white;" class="btn-primary;height:100%;">用户列表</a></li>
                   <li class="divider"></li>
                   <li><a href="#" id="logout" style="color:white;" class="btn-primary;height:100%;">退出</a></li>
-              </ul>
-            {{else}}
-              <a href='/admin' data-target="#" class="btn-primary" style="color:white">
-                您好，请先登陆
-              </a>
-             {{/if}}
-            </li>
-        </ul>
-    </div>
-</div>
+                </ul>
+                {{else}}
+                <a href='/admin' data-target="#" class="btn-primary" style="color:white">
+                  您好，请先登陆
+                </a>
+                {{/if}}
+              </li>
+            </ul>
+          </div>
+        </div>
 
 
 

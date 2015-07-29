@@ -11,9 +11,9 @@
       </ul> 
       <p>{{{ body }}}</p>
       {{#if currentUser}}
-        {{#if isPostAuthor authorId}}
-          <a href="/admin/edit/{{_id}}" class="btn btn-primary">编辑</a>
-        {{/if}}
+      {{#if isPostAuthor authorId}}
+      <a href="/admin/edit/{{_id}}" class="btn btn-primary">编辑</a>
+      {{/if}}
       {{/if}}
       <hr />
       {{> comments}}
