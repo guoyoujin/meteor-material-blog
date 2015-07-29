@@ -10,69 +10,69 @@
           </div>
           </form>
         <ul  class="side-nav teal accent-5 left" id="mobile-demo">
-          <li><a href="/">首页</a></li>
-          <li><a href="/admin/te_down_post_new">添加博客</a></li>
-          <li><a href="/about">关于</a></li>
-          <li><a href="/contact">联系我</a></li>
-          <li><a href="/markdown">markDown</a></li>
+          <li><a href="/" id="a_coustom">首页</a></li>
+          <li><a href="/admin/te_down_post_new" id="a_coustom">添加博客</a></li>
+          <li><a href="/about" id="a_coustom">关于</a></li>
+          <li><a href="/contact" id="a_coustom">联系我</a></li>
+          <li><a href="/markdown" id="a_coustom">markDown</a></li>
           <li>
             {{#if is_login}}
-            <a  class=' dropdown-button' data-beloworigin="true" href='#' data-activates='dropdown1'>
+            <a  class='dropdown-button' data-beloworigin="true" href='#' data-activates='dropdown1' style="text-decoration:none;" id="dropdown-button">
             <i class="mdi-navigation-arrow-drop-down right"></i>
               欢迎您, {{currentUser.profile.name}}
               <ul id='dropdown1' class='dropdown-content'>
                 <li class="divider"></li>
-                <li><a href="/admin">博客列表</a></li>
-                <li class="divider"></li>
+                <li><a href="/admin" id="a_coustom">博客列表</a></li>
+                <li class="divider" id="a_coustom"></li>
                 <li><a href="/admin/new-post">添加博客</a></li>
+                <li class="divider" id="a_coustom"></li>
+                <li><a href="/admin/add-new-user" id="a_coustom">添加用户</a></li>
+                <li class="divider" id="a_coustom"></li>
+                <li><a href="/admin/users" id="a_coustom">用户列表</a></li>
                 <li class="divider"></li>
-                <li><a href="/admin/add-new-user">添加用户</a></li>
-                <li class="divider"></li>
-                <li><a href="/admin/users">用户列表</a></li>
-                <li class="divider"></li>
-                <li><a href="#" id="logout">退出</a></li>
+                <li><a href="#" id="logout" >退出</a></li>
                 </ul>
             </a>
            {{else}}
-           <a  class=' dropdown-button' data-beloworigin="true" href='/admin' data-activates='dropdown1'>
+           <a  class='dropdown-button' data-beloworigin="true" href='/admin' data-activates='dropdown1' id="dropdown-button" >
            <i class="mdi-navigation-arrow-drop-down right"></i>您好，请先登陆</a>
            {{/if}}
           </li>
         </ul>
         <div >
-          <a href="/" class="brand-logo"  style="font-size:18px;">天青色等烟雨</a>
+          <a href="/" class="brand-logo"  style="font-size:18px;" id="a_coustom">天青色等烟雨</a>
           <ul id="nav-wrapper" class="right hide-on-med-and-down ">
-            <li><a href="/">首页</a></li>
-            <li><a href="/admin/te_down_post_new">添加博客</a></li>
-            <li><a href="/about">关于</a></li>
-            <li><a href="/contact">联系我</a></li>
-            <li><a href="/markdown">markDown</a></li>
+            <li><a href="/" id="a_coustom">首页</a></li>
+            <li><a href="/admin/te_down_post_new" id="a_coustom">添加博客</a></li>
+            <li><a href="/about" id="a_coustom">关于</a></li>
+            <li><a href="/contact" id="a_coustom">联系我</a></li>
+            <li><a href="/markdown" id="a_coustom">markDown</a></li>
             <li>
               {{#if is_login}}
-              <a  class=' dropdown-button' data-beloworigin="true" href='#' data-activates='dropdown1' style="text-align: right">
+              <a  class=' dropdown-button' data-beloworigin="true" href='#' data-activates='dropdown1' style="text-align: right;text-decoration:none;" id="dropdown-button">
               <i class="mdi-navigation-arrow-drop-down right"></i>
                   欢迎您, {{currentUser.profile.name}}
                   <ul id='dropdown1' class='dropdown-content'>
                     <li class="divider"></li>
-                    <li><a href="/admin">博客列表</a></li>
+                    <li><a href="/admin" id="a_coustom">博客列表</a></li>
                     <li class="divider"></li>
-                    <li><a href="/admin/new-post">添加博客</a></li>
+                    <li><a href="/admin/new-post" id="a_coustom">添加博客</a></li>
                     <li class="divider"></li>
-                    <li><a href="/admin/add-new-user">添加用户</a></li>
+                    <li><a href="/admin/add-new-user" id="a_coustom">添加用户</a></li>
                     <li class="divider"></li>
-                    <li><a href="/admin/users">用户列表</a></li>
+                    <li><a href="/admin/users" id="a_coustom">用户列表</a></li>
                     <li class="divider"></li>
                     <li><a href="#" id="logout">退出</a></li>
                   </ul>
               </a>
              {{else}}
-             <a  class=' dropdown-button' data-beloworigin="true" href='/admin' data-activates='dropdown1'>
+             <a  class='dropdown-button' data-beloworigin="true" href='/admin' data-activates='dropdown1' id="dropdown-button">
                   您好，请先登陆
              </a>
              {{/if}}
             </li>
           </ul>
-          <a href="#" data-activates="mobile-demo" class="button-collapse" style="position:relative;float:right;"><i class="mdi-navigation-menu"></i></a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse" style="position:relative;float:right;" id="a_coustom"><i class="mdi-navigation-menu"></i></a>
         </div>
       </div>
     </nav>
