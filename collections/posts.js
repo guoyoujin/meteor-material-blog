@@ -180,12 +180,12 @@ Meteor.methods({
       votes: 0
     });
     var postId = Posts.insert(post);
-    Router.go('/admin');
     return {
       _id: postId
     };
   },
   postEdit: function (modifier, postId) {
+    console.log(modifier);
     check(Meteor.userId(), String);
     check(modifier.$set, {
       title: String,
@@ -194,7 +194,7 @@ Meteor.methods({
     });
     var errors = validatePost(modifier.$set);
     if (errors.title || errors.body)
-      throw new Meteor.Error('invalid-post', "你必须为你的帖子填写标题和 内容");
+      throw new Meteor.Error('invalid-post', "你必须为你的帖子填写标题和内容");
     modifier.$set.updated_at = new Date();
     Posts.update(postId, modifier);
     return Posts.findOne(postId);

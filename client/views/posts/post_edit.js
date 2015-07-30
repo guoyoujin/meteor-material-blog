@@ -18,8 +18,7 @@ AutoForm.hooks({
     postEditForm: {
         before: {
             editPost: function(modifier) {
-                console.log(modifier)
-                console.log(template)
+              console.log("编辑posts");
                 var post = doc;
                 if (!Meteor.user()) {
                     flashMessage(i18n.t('you_must_be_logged_in'), "");
@@ -32,6 +31,7 @@ AutoForm.hooks({
             }
         },
         onSuccess: function(operation, post) {
+          console.log("编辑posts");
           Router.go('post_single', {_id: post._id});
         },
         onError: function(operation, error) {
