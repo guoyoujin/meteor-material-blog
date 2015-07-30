@@ -185,7 +185,6 @@ Meteor.methods({
     };
   },
   postEdit: function (modifier, postId) {
-    console.log(modifier);
     check(Meteor.userId(), String);
     check(modifier.$set, {
       title: String,
@@ -197,6 +196,8 @@ Meteor.methods({
       throw new Meteor.Error('invalid-post', "你必须为你的帖子填写标题和内容");
     modifier.$set.updated_at = new Date();
     Posts.update(postId, modifier);
+    post = Posts.findOne(postId);
+    Posts.update(postId, { '$set': {summary: post.body.replace(/<[^>]+>/g," ").substring(0, 300).trim()}});
     return Posts.findOne(postId);
   },
   postDelete: function (postId) {
