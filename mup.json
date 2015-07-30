@@ -30,7 +30,7 @@
   "appName": "meteor-material-blog",
 
   // Location of app (local directory)
-  "app": "/Users/gyj/Documents/workspace/meteor/meteor-material-blog",
+  "app": "/Users/guoyoujin/Documents/rails/meteor-material-blog",
 
   // Configure environment
   "env": {
