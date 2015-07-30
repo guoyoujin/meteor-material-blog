@@ -50,10 +50,7 @@ AutoForm.hooks({
         },
         onSuccess: function(operation, post) {
             this.template.$('button[type=submit]').removeClass('loading');
-			Router.go('/');            
-			if (post.status === STATUS_PENDING) {
-	                flashMessage(i18n.t('thanks_your_post_is_awaiting_approval'), 'success');
-	        }
+                Router.go('/');
         },
         onError: function(operation, error) {
             this.template.$('button[type=submit]').removeClass('loading');

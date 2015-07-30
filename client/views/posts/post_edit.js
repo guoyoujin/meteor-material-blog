@@ -31,7 +31,6 @@ AutoForm.hooks({
             }
         },
         onSuccess: function(operation, post) {
-          console.log("编辑posts");
           Router.go('post_single', {_id: post._id});
         },
         onError: function(operation, error) {
