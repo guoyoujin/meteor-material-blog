@@ -2,7 +2,7 @@
   {{> navbar}}
   <div class="Containers">
     <div class="card-panel">
-     <form id="contact">
+     <form id="contact" name="contact">
        <h2 class="teal-text text-darken-2">联系我</h2>
        <div class="input-field">
          <input type="text" name="name" class="mui-form-control" placeholder="Name" required>
@@ -17,7 +17,7 @@
          <textarea name="comments" class="materialize-textarea" placeholder="Comments, questions, and feedback" requireds></textarea>
        </div>
        <input type="hidden" name="blank"  class="mui-form-control">
-       <button type="submit" class="btn btn-primary">确定
+       <button type="submit" name="submit-contact" class="btn btn-primary">确定
         <i class="mdi-content-send right"></i>
       </button>
     </form>
