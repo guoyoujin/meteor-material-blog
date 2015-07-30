@@ -8,7 +8,14 @@
         <li><h5 class="teal-text text-darken-2"><strong>最后一次更新:</strong> {{formatDate publishedOn }}</h5>
         </li>
       </ul>
-      <form name="new-post" id=new-post>
+      <div class="grid grid-module" style="background:#fff">
+        {{> quickForm collection="Posts" doc=this id="postEditForm" template="telescope" label-class="control-label" input-col-class="controls" type="method-update" meteormethod="postEdit"}}
+    </div>
+
+    <div class="grid grid-module">
+        <a class="btn btn-danger delete" href="#">删除文章</a>
+    </div>
+      <!-- <form name="new-post" id="new-post">
         <div class="row">
           <div class="col s5">
             <div class="input-field">
@@ -27,8 +34,9 @@
         <button class="btn btn-primary" type="submit" name="submit-post">保存
           <i class="mdi-content-send right"></i>
         </button>
-      </form>
+      </form> -->
       <h5 class="red-text text-darken-2">{{ error }}</h5>
     </div>
+
   </div>
 </template>
