@@ -1,7 +1,7 @@
 <template name="posts_list">
   <div class="Containers">
     {{#each posts}}
-    <div class="card-panel ">
+    <div class="card-panel" style="word-break:break-all">
       <a href="posts/{{_id}}" id="a_coustom"><h2 class="teal-text text-darken-2">{{ title }}</h2></a>
       <p style="font-size:18px"> {{{summary}}}... <a href="posts/{{_id}}" class="teal-text text-darken-2">详细</a></p>
       <div class="row">

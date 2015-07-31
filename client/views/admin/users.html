@@ -3,26 +3,26 @@
   <div class="Containers">
     <div class="card-panel">
       <h5 class="red-text text-darken-2">{{ error }}</h5>
-      <table class = "table table-striped table-hover bordered">
+      <table class = "table table-striped table-hover bordered" style="word-break:break-all">
         <thead>
           <tr class="success">
-            <th>姓名</th>
-            <th>邮箱</th>
-            <th>权限</th>
-            <th>操作</th>
+            <th style="height:30px;line-height:30px">姓名</th>
+            <th style="height:30px;line-height:30px">邮箱</th>
+            <th style="height:30px;line-height:30px">权限</th>
+            <th style="height:30px;line-height:30px">操作</th>
           </tr>
         </thead>
         <tbody>
           {{#each allUsers}}
-          <tr class="active" style="line-height: 50px;height: 50px;">
-            <td>{{ profile.name }}</td>
-            <td>
+          <tr class="active" >
+            <td style="height:30px;line-height:30px">{{ profile.name }}</td>
+            <td style="height:30px;line-height:30px">
               {{#each emails}}
               {{ address }}
               {{/each}}
             </td>
-            <td>{{ roles }}</td>
-            <td><a href="#" data="{{_id}}" class="red-text" id="delete">删除</a></td>
+            <td style="height:30px;line-height:30px">{{ roles }}</td>
+            <td style="height:30px;line-height:30px"><a href="#" data="{{_id}}" class="red-text" id="delete">删除</a></td>
           </tr>
           {{/each}}
         </tbody>
