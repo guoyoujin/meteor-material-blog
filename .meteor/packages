@@ -6,6 +6,8 @@
 
 meteor-platform
 iron:router
+underscore
+sacha:spin
 reactive-var
 materialize:materialize
 accounts-password

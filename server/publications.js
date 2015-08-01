@@ -2,6 +2,23 @@ Meteor.publish('all-posts', function() {
   return Posts.find();
 });
 
+Meteor.publish('posts', function(howfind,options) {
+    check(options, {
+        sort: Object,
+        limit: Number
+    });
+    if(howfind && typeof(howfind) != "undefined") {
+        return Posts.find({"title": {$regex: howfind, $options:'i'}}, options);
+    }
+    else{
+        var options = _.extend(options, {
+            fields: {title:1,slug:1,body:1,summary:1,authorName:1,authorId:1,publishedOn:1,created_at:1}
+        });
+        return Posts.find({}, options);
+    }
+
+});
+
 Meteor.publish('post', function(_id) {
   return Posts.find({ _id: _id });
 });

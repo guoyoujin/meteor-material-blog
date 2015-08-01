@@ -10,5 +10,12 @@
      </div>
    </div>
    {{/each}}
+   {{#if nextPath}}
+      <a class="btn btn-primary" style="width:100%" href="{{nextPath}}">加载更多</a>
+   {{else}}
+      {{#unless ready}}
+          {{> spinner}}
+      {{/unless}}
+   {{/if}}
  </div>
 </template>
